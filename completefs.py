@@ -11,7 +11,7 @@ class CompleteFSAutocomplete(sublime_plugin.EventListener):
 		if(qoute == -1):
 			return [];
 		path = line[qoute+1:cursor];
-		firstDir = path.find('/');
+		firstDir = path.find('\');
 		fileName = view.file_name();
 		if(firstDir == -1 or (path[:firstDir] != '.' and path[:firstDir] != '..' and path[:firstDir] != '')):
 			return [];
